@@ -1,0 +1,145 @@
+<div class="card" ng-init="getAlldata();getFirstTeam();getSecondTeam();">
+   <div class="row">
+      <div class="panel panel-info">
+         <div class="panel-heading">
+            <span class="panel-title">Team  :  Support_Team_1</span>
+            <span style="margin-left: 10em"></span>
+            <span style="margin-left: 3em">Critical : {{countObj1.critical1}}</span>
+            <span style="margin-left: 3em">High : {{countObj1.high1}}</span>
+            <span style="margin-left: 3em">Medium : {{countObj1.medium1}}</span>
+            <span style="margin-left: 3em">Low : {{countObj1.low1}}</span>
+            <span style="margin-left: 10em"></span>
+            <span style="margin-left: 3em">Open : {{countObj1.status_open1}}</span>
+            <span style="margin-left: 3em">Unassigned : {{countObj1.status_unassigned1}}</span>
+            <span style="margin-left: 3em">In-Progress : {{countObj1.status_inprogress1}}</span>
+         </div>
+         <div class="panel-body">
+            <div class="pane pane--table1">
+               <div class="pane-hScroll">
+                  <table>
+                     <thead>
+                        <tr>
+                           <th class="text-center" style="width: 53px;">S.N.</th>
+                           <th class="text-center">INC Number</th>
+                           <th class="text-center">Creation Date</th>
+                           <th class="text-center">Last Updated</th>
+                           <th class="text-center">Opened By</th>
+                           <th class="text-center">Owned By</th>
+                           <th class="text-center">Assignee</th>
+                           <th class="text-center">Configuration Item</th>
+                           <th class="text-center">Assignment Group</th>
+                           <th class="text-center">Urgency Flag</th>
+                           <th class="text-center">CI Business Criticallity</th>
+                           <th class="text-center">Category</th>
+                           <th class="text-center">Priority Flag</th>
+                           <th class="text-center">Impact</th>
+                           <th class="text-center">Caller</th>
+                           <th class="text-center">Status</th>
+                           <th class="text-center">Short Description</th>
+                        </tr>
+                     </thead>
+                  </table>
+                  <div class="pane-vScroll">
+                  <table>
+                     <tbody class="text-center">
+                        <tr ng-repeat="inc in data1">
+                           <td style="width: 53px;">{{$index+1}}</td>
+                           <td><a href="http://localhost:8082/{{inc.inc_number}}" target="_blank">{{inc.inc_number}}</a></td>
+                           <td>{{inc.created_dt | date:'dd-MM-yyyy'}}</td>
+                           <td>{{inc.updated_dt | date:'dd-MM-yyyy'}}</td>
+                           <td>{{inc.opened_by}}</td>
+                           <td>{{inc.owning_group}}</td>
+                           <td>{{inc.assignee}}</td>
+                           <td>{{inc.configuration_item}}</td>
+                           <td>{{inc.assignment_group}}</td>
+                           <td>{{inc.urgency}}</td>
+                           <td>{{inc.ci_business_criticality}}</td>
+                           <td>{{inc.category}}</td>
+                           <td>{{inc.priority}}</td>
+                           <td>{{inc.impact}}</td>
+                           <td>{{inc.caller}}</td>
+                           <td>{{inc.state}}</td>
+                           <td>{{inc.short_description}}</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="panel panel-info">
+         <div class="panel-heading">
+            <span class="panel-title">Team  :  Support_Team_2</span>
+            <span style="margin-left: 10em"></span>
+            <span style="margin-left: 3em">Critical : {{countObj2.critical2}}</span>
+            <span style="margin-left: 3em">High : {{countObj2.high2}}</span>
+            <span style="margin-left: 3em">Medium : {{countObj2.medium2}}</span>
+            <span style="margin-left: 3em">Low : {{countObj2.low2}}</span>
+            <span style="margin-left: 10em"></span>
+            <span style="margin-left: 3em">Open : {{countObj2.status_open2}}</span>
+            <span style="margin-left: 3em">Unassigned : {{countObj2.status_unassigned2}}</span>
+            <span style="margin-left: 3em">In-Progress : {{countObj2.status_inprogress2}}</span>
+         </div>
+         <div class="panel-body">
+            <div class="pane pane--table1">
+               <div class="pane-hScroll">
+                  <table>
+                     <thead>
+                        <tr>
+                           <th class="text-center" style="width: 53px;">S.N.</th>
+                           <th class="text-center">INC Number</th>
+                           <th class="text-center">Creation Date</th>
+                           <th class="text-center">Last Updated</th>
+                           <th class="text-center">Opened By</th>
+                           <th class="text-center">Owned By</th>
+                           <th class="text-center">Assignee</th>
+                           <th class="text-center">Configuration Item</th>
+                           <th class="text-center">Assignment Group</th>
+                           <th class="text-center">Urgency Flag</th>
+                           <th class="text-center">CI Business Criticallity</th>
+                           <th class="text-center">Category</th>
+                           <th class="text-center">Priority Flag</th>
+                           <th class="text-center">Impact</th>
+                           <th class="text-center">Caller</th>
+                           <th class="text-center">Status</th>
+                           <th class="text-center">Short Description</th>
+                        </tr>
+                     </thead>
+                  </table>
+                  <div class="pane-vScroll">
+                  <table>
+                     <tbody class="text-center">
+                        <tr ng-repeat="inc in data2">
+                           <td style="width: 53px;">{{$index+1}}</td>
+                           <td><a href="http://localhost:8082/{{inc.inc_number}}" target="_blank">{{inc.inc_number}}</a></td>
+                           <td>{{inc.created_dt | date:'dd-MM-yyyy'}}</td>
+                           <td>{{inc.updated_dt | date:'dd-MM-yyyy'}}</td>
+                           <td>{{inc.opened_by}}</td>
+                           <td>{{inc.owning_group}}</td>
+                           <td>{{inc.assignee}}</td>
+                           <td>{{inc.configuration_item}}</td>
+                           <td>{{inc.assignment_group}}</td>
+                           <td>{{inc.urgency}}</td>
+                           <td>{{inc.ci_business_criticality}}</td>
+                           <td>{{inc.category}}</td>
+                           <td>{{inc.priority}}</td>
+                           <td>{{inc.impact}}</td>
+                           <td>{{inc.caller}}</td>
+                           <td>{{inc.state}}</td>
+                           <td>{{inc.short_description}}</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<script type="text/javascript">
+   $('.pane-hScroll').scroll(function() {
+     $('.pane-vScroll').width($('.pane-hScroll').width() + $('.pane-hScroll').scrollLeft());
+   });
+</script>

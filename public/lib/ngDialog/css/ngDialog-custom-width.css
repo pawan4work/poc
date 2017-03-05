@@ -1,0 +1,32 @@
+.ngdialog.ngdialog-theme-plain.custom-width .ngdialog-content {
+    width: 800px;
+    height: 480px;
+    padding: 0px;
+}
+
+.bar_header
+{
+    padding: 10px;
+    background-color: #30eaa1;
+    color:white;
+    height: 55px;
+    font-family: "Oswald";
+    font-size: 20px;
+}
+
+.lbl
+{
+    font-family: "Oswald";
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.category_select
+{
+    margin-top:10px;
+    margin-left:10px;
+    height:47px;
+    font-family: "Oswald";
+    font-size: 16px;  
+    width: 100%;
+}

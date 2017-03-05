@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <base href="/" />
+  <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <!-- Custom styling plus plugins -->
+  <link href="css/custom.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" />
+      <!--  Material Dashboard CSS    -->
+    <link href="material/assets/css/material-dashboard.css" rel="stylesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/maps/jquery-jvectormap-2.0.1.css" />
+
+  <link href="css/floatexamples.css" rel="stylesheet" type="text/css" />
+  <link href="assets/toaster/toaster.min.css" rel="stylesheet" />
+
+
+
+
+</head>
+
+<body ng-app="portal" ng-init="" class="nav-md" ng-init="">
+  <div class="container body" ng-controller="portalCtrl">
+
+    <!-- top navigation -->
+    <div class="top_nav" ng-include="'_part/admin/topnavigation.html'" >
+    </div>
+    <toaster-container toaster-options="{'time-out': 3000, 'close-button':true}"></toaster-container>   
+      <div class="" role="main" ui-view autoscroll="false"></div>  
+  </div>
+
+<script src="js/jquery.min.js"></script>
+<!-- your app's js -->
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="assets/angular-sanitize.min.js"></script>
+<script src="assets/angular-resource.min.js"></script>
+<script src="assets/angular-animate.min.js"></script>
+<script src="assets/toaster/toaster.js"></script>
+<script src="assets/angular-cookies.min.js"></script>
+<script src="angular/angular_routes.js"></script>
+<script src="lib/angular-pageslide-directive.min.js"></script>
+<script src="lib/ui-bootstrap-tpls-0.14.3.min.js"></script>
+
+<script src="angular/Portal/controllers/portalcontroller.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="material/assets/js/material.min.js" type="text/javascript"></script>
+<script src="material/assets/js/material-dashboard.js"></script>
+</body>
+</html>
